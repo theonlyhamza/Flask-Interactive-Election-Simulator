@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login | Interactive Election Simulator</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_login.css') }}">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="top-header">
+        <div class="container top-bar-content">
+            <img src="https://images.seeklogo.com/logo-png/41/1/emblem-of-the-election-commission-of-pakistan-logo-png_seeklogo-411520.png"
+                alt="ECP Logo">
+            <div class="top-title">Election Commission of Pakistan</div>
+        </div>
+    </header>
+
+    <!-- NAV -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('cast_vote') }}">Cast Vote</a></li>
+                <li><a class="active" href="{{ url_for('admin_login') }}">Admin Login</a></li>
+                <li><a href="{{ url_for('support') }}">Support</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="main-content">
+        <div class="container">
+
+            <!-- TITLE -->
+            <div class="page-title">
+                <h1>Administrator Access</h1>
+                <p class="subtitle">
+                    Restricted system — authorized personnel only
+                </p>
+            </div>
+            <br>
+            <!-- SECURITY NOTICE -->
+            <div class="about-card">
+                <h2>Security Notice</h2>
+                <p>
+                    This section is restricted to authorized election officials.
+                    All activities performed in the admin panel are logged and
+                    monitored for transparency and audit purposes.
+                </p>
+            </div>
+
+            <!-- LOGIN CARD -->
+            <div class="admin-login-card">
+                <form method="POST">
+
+                    <div class="form-group">
+                        <label>Admin Username</label>
+                        <input type="text" name="username" placeholder="e.g. election_admin" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Admin Password</label>
+                        <input type="password" name="password" placeholder="Enter secure password" required>
+                    </div>
+
+                    <button type="submit" class="vote-btn full-width">
+                        Secure Login
+                    </button>
+
+                </form>
+            </div>
+            <br>
+            <br>
+
+            <!-- FOOT NOTE -->
+            <div class="about-card">
+                <h2>Why Secure Login?</h2>
+                <p>
+                    The admin panel allows voter registration, party and area
+                    management, live result monitoring, and final result
+                    declaration. Unauthorized access may compromise election integrity.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

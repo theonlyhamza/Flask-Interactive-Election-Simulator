@@ -1,0 +1,104 @@
+/* ===== FINAL RESULTS PAGE ===== */
+
+/* Page Title */
+.page-title h1 {
+    color: var(--color-dark-green);
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.page-title p.subtitle {
+    color: var(--color-medium-green);
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+/* Winner Highlight */
+.winner-box {
+    background: #eafaf1;
+    padding: 25px 30px;
+    margin: 20px 0;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    border-left: 6px solid var(--color-dark-green);
+}
+
+.winner-box h2 {
+    font-size: 1.8rem;
+    color: var(--color-dark-green);
+}
+
+.winner-box .winner-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+/* Results Table */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 1rem;
+}
+
+.results-table th, .results-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.results-table th {
+    background-color: var(--color-light-green);
+    color: var(--color-dark-green);
+}
+
+/* Results Cards */
+.results-card {
+    background: var(--color-white);
+    padding: 25px 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* Results Grid for Charts */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Download Section */
+.download-box {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.download-box .vote-btn {
+    padding: 12px 25px;
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.download-box .vote-btn:hover {
+    background-color: var(--color-medium-green);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .download-box {
+        flex-direction: column;
+    }
+}

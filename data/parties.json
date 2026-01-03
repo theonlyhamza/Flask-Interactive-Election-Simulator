@@ -1,0 +1,122 @@
+[
+    {
+        "party_name": "Pakistan Tehreek-e-Insaf",
+        "symbol": "Bat",
+        "founder": "Imran Khan",
+        "leader": "Imran Khan",
+        "year": "1996",
+        "ideology": "Centre‑right / Anti‑corruption",
+        "head_office": "Islamabad",
+        "website": "https://www.insaf.pk",
+        "description": "Pakistan Tehreek‑e‑Insaf (PTI) is a major political party focused on anti‑corruption and reform.",
+        "logo": "static/uploads/PTIlogo.png"
+    },
+    {
+        "party_name": "Pakistan Muslim League (N)",
+        "symbol": "Lion",
+        "founder": "Nawaz Sharif",
+        "leader": "Shehbaz Sharif",
+        "year": "1993",
+        "ideology": "Conservative",
+        "head_office": "Lahore",
+        "website": "https://www.pmln.org",
+        "description": "PML‑N is one of the largest centre‑right parties in Pakistan with deep roots in Punjab.",
+        "logo": "static/uploads/PMLNlogo.png"
+    },
+    {
+        "party_name": "Pakistan Peoples Party",
+        "symbol": "Arrow",
+        "founder": "Zulfikar Ali Bhutto",
+        "leader": "Bilawal Bhutto Zardari",
+        "year": "1967",
+        "ideology": "Centre‑left",
+        "head_office": "Karachi",
+        "website": "https://www.ppp.org.pk",
+        "description": "PPP is a historically significant centre‑left party with strong support in Sindh.",
+        "logo": "static/uploads/PPPlogo.png"
+    },
+    {
+        "party_name": "Muttahida Qaumi Movement Pakistan",
+        "symbol": "Clock",
+        "founder": "Altaf Hussain",
+        "leader": "Waseem Akhtar",
+        "year": "1984",
+        "ideology": "Centre / Urban rights",
+        "head_office": "Karachi",
+        "website": "",
+        "description": "MQM‑P focuses on urban Sindh issues, especially in Karachi and Hyderabad.",
+        "logo": "static/uploads/MQMlogo.png"
+    },
+    {
+        "party_name": "Jamiat UlemaeIslam (F)",
+        "symbol": "Book",
+        "founder": "Mufti Mahmood",
+        "leader": "Fazl‑ur‑Rehman",
+        "year": "1980",
+        "ideology": "Religious conservatism",
+        "head_office": "Peshawar",
+        "website": "",
+        "description": "JUI‑F is a religious conservative party with a strong base in Khyber Pakhtunkhwa and Balochistan.",
+        "logo": "static/uploads/JUILogo.png"
+    },
+    {
+        "party_name": "Pakistan Muslim League (Q)",
+        "symbol": "Circle",
+        "founder": "Shujaat Hussain",
+        "leader": "Chaudhry Shujaat Hussain",
+        "year": "2002",
+        "ideology": "Centre‑right",
+        "head_office": "Islamabad",
+        "website": "",
+        "description": "PML‑Q is a faction of the Muslim League that played a significant role in the early 2000s.",
+        "logo": "static/uploads/PMLQlogo.png"
+    },
+    {
+        "party_name": "Awami National Party",
+        "symbol": "Lantern",
+        "founder": "Abdul Wali Khan",
+        "leader": "Aimal Wali Khan",
+        "year": "1986",
+        "ideology": "Pashtun nationalism / Socialist",
+        "head_office": "Peshawar",
+        "website": "",
+        "description": "ANP advocates for Pashtun rights and secular progressive policies. :contentReference[oaicite:1]{index=1}",
+        "logo": "static/uploads/ANPlogo.png"
+    },
+    {
+        "party_name": "Balochistan Awami Party",
+        "symbol": "Cow",
+        "founder": "Saeed Ahmed Hashmi",
+        "leader": "Khalid Hussain Magsi",
+        "year": "2018",
+        "ideology": "Centrist / Regional",
+        "head_office": "Quetta",
+        "website": "",
+        "description": "BAP is a regional party focusing on Balochistan provincial issues. :contentReference[oaicite:2]{index=2}",
+        "logo": "static/uploads/BAPlogo.png"
+    },
+    {
+        "party_name": "Tehreeke Labbaik Pakistan",
+        "symbol": "Flag",
+        "founder": "Khadim Hussain Rizvi",
+        "leader": "Saad Hussain Rizvi",
+        "year": "2015",
+        "ideology": "Religious conservatism",
+        "head_office": "Lahore",
+        "website": "",
+        "description": "TLP is an Islamist party known for its strong religious stance. :contentReference[oaicite:3]{index=3}",
+        "logo": "static/uploads/TLPlogo.png"
+    },
+    {
+        "party_name": "Barabri Party Pakistan",
+        "symbol": "Pen",
+        "founder": "Jawad Ahmad",
+        "leader": "Jawad Ahmad",
+        "year": "2018",
+        "ideology": "Egalitarianism",
+        "head_office": "Lahore",
+        "website": "http://barabriparty.pk/",
+        "description": "BPP focuses on equality and equitable access for all citizens. :contentReference[oaicite:4]{index=4}",
+        "logo": "static/uploads/BBPlogo.png"
+    }
+]

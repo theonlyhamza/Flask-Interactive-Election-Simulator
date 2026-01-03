@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Area | Admin Panel</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/add_area.css') }}">
+
+</head>
+
+<body>
+
+
+    <header class="top-header">
+        <div class="container top-bar-content">
+            <img
+                src="https://images.seeklogo.com/logo-png/41/1/emblem-of-the-election-commission-of-pakistan-logo-png_seeklogo-411520.png">
+            <div class="top-title">Admin Panel – Party Registration</div>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="{{ url_for('admin_dashboard') }}">Dashboard</a></li>
+                <li><a class="active" href="#">Add Area</a></li>
+                <li><a href="{{ url_for('admin_login') }}">Support</a></li>
+                <li><a href="{{ url_for('about') }}" class="active">About Us</a></li>
+                <li><a href="{{ url_for('admin_login') }}">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <main class="main-content">
+        <div class="container">
+
+            <div class="page-title">
+                <h1>Register Area</h1>
+                <p class="subtitle">Areas for Elections</p>
+            </div>
+            <div class="container">
+
+                <div class="vote-form-card">
+
+                    <form method="POST">
+
+                        <div class="form-group">
+                            <label>Constituency Code</label>
+                            <input type="text" name="code" placeholder="e.g. NA-134 / PP-180" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Area Name</label>
+                            <input type="text" name="area_name" placeholder="Enter area name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Province</label>
+                            <select name="province" required>
+                                <option value="">-- Select Province --</option>
+                                <option>Punjab</option>
+                                <option>Sindh</option>
+                                <option>KPK</option>
+                                <option>Balochistan</option>
+                                <option>Gilgit Baltistan</option>
+                                <option>Islamabad</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Area Type</label>
+                            <select name="type" required>
+                                <option value="">-- Select Type --</option>
+                                <option>Urban</option>
+                                <option>Rural</option>
+                                <option>Mixed</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Estimated Voters</label>
+                            <input type="number" name="voters" placeholder="Approx voter count" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Remarks (Optional)</label>
+                            <textarea name="remarks" rows="3" placeholder="Any additional info"></textarea>
+                        </div>
+
+                        <button type="submit" class="vote-btn full-width">
+                            Add Area
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+    </main>
+
+</body>
+
+</html>

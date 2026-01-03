@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vote Status | Interactive Election Simulator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vote_status.css') }}">
+</head>
+<body>
+
+<header class="top-header">
+    <div class="container top-bar-content">
+        <img src="https://images.seeklogo.com/logo-png/41/1/emblem-of-the-election-commission-of-pakistan-logo-png_seeklogo-411520.png" alt="ECP Logo">
+        <div class="top-title">Interactive Election Simulator</div>
+    </div>
+</header>
+
+<main class="main-content">
+    <div class="container vote-status-card">
+        {% if success %}
+            <div class="status-icon success animate">✅</div>
+            <h1 class="status-title animate">Vote Cast Successfully!</h1>
+            <p class="status-subtitle animate">Thank you for participating in the election.</p>
+        {% else %}
+            <div class="status-icon fail animate">❌</div>
+            <h1 class="status-title animate">Vote Failed</h1>
+            <p class="status-subtitle animate">Invalid CNIC or you have already voted.</p>
+        {% endif %}
+        <a href="{{ url_for('home') }}" class="vote-btn animate">Back to Home</a>
+    </div>
+</main>
+
+</body>
+</html>

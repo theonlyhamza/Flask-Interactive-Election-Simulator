@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | Interactive Election Simulator</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_dashboard.css') }}">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="top-header">
+        <div class="container top-bar-content">
+            <img
+                src="https://images.seeklogo.com/logo-png/41/1/emblem-of-the-election-commission-of-pakistan-logo-png_seeklogo-411520.png">
+            <div class="top-title">Election Commission of Pakistan</div>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('cast_vote') }}">Cast Vote</a></li>
+                <li><a class="active" href="{{ url_for('admin_dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('admin_login') }}">Support</a></li>
+                <li><a href="{{ url_for('about') }}" class="active">About Us</a></li>
+                <li><a href="{{ url_for('admin_logout') }}">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="container">
+
+            <!-- PAGE TITLE -->
+            <div class="page-title">
+                <h1>Election Management System</h1>
+                <p class="subtitle">Administrative Control Panel</p>
+            </div>
+
+            <!-- SYSTEM NOTICE -->
+            <div class="about-card">
+                <h2>System Overview</h2>
+                <p>
+                    This dashboard allows authorized administrators to manage
+                    voters, political parties, constituencies, monitor live election
+                    results, and officially conclude the voting process.
+                </p>
+            </div>
+
+            <!-- DASHBOARD GRID -->
+            <div class="dashboard-grid">
+
+                <a href="{{ url_for('register_voter') }}" class="dashboard-card">
+                    <h2>Register Voter</h2>
+                    <p>
+                        Add and manage eligible voters by CNIC, area,
+                        and voting status.
+                    </p>
+                </a>
+
+                <a href="{{ url_for('add_party') }}" class="dashboard-card">
+                    <h2>Political Parties</h2>
+                    <p>
+                        Register and manage political parties
+                        participating in the election.
+                    </p>
+                </a>
+
+                <a href="{{ url_for('add_area') }}" class="dashboard-card">
+                    <h2>Election Areas</h2>
+                    <p>
+                        Create and manage constituencies / electoral areas.
+                    </p>
+                </a>
+
+                <a href="{{ url_for('live_results') }}" class="dashboard-card">
+                    <h2>Live Results</h2>
+                    <p>
+                        View real-time vote counts and party-wise statistics.
+                    </p>
+                </a>
+
+                <a href="{{ url_for('download_voters') }}" class="dashboard-card">
+                    <h2>Download Voters Data</h2>
+                    <p>
+                        Export registered voters data for audit and verification.
+                    </p>
+                </a>
+
+                <a href="{{ url_for('download_votes') }}" class="dashboard-card">
+                    <h2>Download Votes Data</h2>
+                    <p>
+                        Export cast votes data for result verification.
+                    </p>
+                </a>
+
+                <!-- END VOTING -->
+                <a href="{{ url_for('end_voting') }}" class="dashboard-card danger">
+                    <h2>End Voting & Declare Results</h2>
+                    <p>
+                        Permanently close voting and declare final winners.
+                    </p>
+                </a>
+
+            </div>
+            <br>
+            <br>
+
+            <!-- WARNING -->
+            <div class="about-card">
+                <h2>Important Notice</h2>
+                <p>
+                    Ending the voting process is irreversible.
+                    Please ensure all votes have been cast before proceeding.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

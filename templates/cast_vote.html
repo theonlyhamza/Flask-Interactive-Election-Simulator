@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cast Vote | Interactive Election Simulator</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cast_vote.css') }}">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="top-header">
+        <div class="container top-bar-content">
+            <img src="https://images.seeklogo.com/logo-png/41/1/emblem-of-the-election-commission-of-pakistan-logo-png_seeklogo-411520.png" alt="ECP Logo">
+            <div class="top-title">Election Commission of Pakistan</div>
+        </div>
+    </header>
+
+    <!-- NAV -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a class="active" href="{{ url_for('cast_vote') }}">Cast Vote</a></li>
+                <li><a href="{{ url_for('admin_login') }}">Admin Panel</a></li>
+                <li><a href="{{ url_for('support') }}">Support</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="container">
+
+            <!-- PAGE TITLE -->
+            <div class="page-title">
+                <h1>Cast Your Vote</h1>
+                <p class="subtitle">CNIC verification ensures one person, one vote</p>
+            </div>
+
+            <!-- INSTRUCTIONS -->
+            <div class="about-card">
+                <h2>Voting Instructions</h2>
+                <ul class="tech-list">
+                    <li>Enter a valid 13-digit CNIC number</li>
+                    <li>Select only one political party</li>
+                    <li>Each voter can cast vote only once</li>
+                    <li>Your vote is confidential and secure</li>
+                </ul>
+            </div>
+
+            <!-- VOTING FORM -->
+            <div class="vote-form-card">
+                <form method="POST">
+
+                    <div class="form-group">
+                        <label>Voter CNIC</label>
+                        <input type="text" name="cnic" maxlength="13" placeholder="e.g. 3520112345671" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Select Political Party</label>
+                        <div class="party-list">
+                            {% for p in parties %}
+                            <label class="party-card">
+                                <input type="radio" name="party" value="{{ p.party_name }}" required>
+                                <img src="{{ p.logo }}" alt="{{ p.party_name }}">
+                                <span>{{ p.party_name }}</span>
+                            </label>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <button type="submit" class="vote-btn full-width">Cast Vote Securely</button>
+
+                </form>
+            </div>
+
+            <!-- SECURITY NOTE -->
+            <div class="about-card">
+                <h2>Security & Transparency</h2>
+                <p>
+                    This simulator follows election principles inspired by the Election Commission of Pakistan. 
+                    Votes are recorded securely and results are generated transparently in real-time.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/popup.js') }}"></script>
+
+    {% if status %}
+    <script>
+        showPopup("{{ status }}");
+    </script>
+    {% endif %}
+
+</body>
+</html>

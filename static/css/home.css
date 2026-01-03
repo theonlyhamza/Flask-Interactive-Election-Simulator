@@ -1,0 +1,90 @@
+/* ===== HOMEPAGE SPECIFIC STYLES ===== */
+
+/* Banner Image */
+.banner-img {
+    width: 100%;
+    max-width: 900px;
+    display: block;
+    margin: 20px auto 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Vote Box */
+.vote-box {
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    text-align: center;
+    border-top: 6px solid var(--color-medium-green);
+}
+
+.vote-box h2 {
+    font-size: 1.8rem;
+    color: var(--color-medium-green);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Dashboard / Features Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.dashboard-card {
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    text-align: center;
+    text-decoration: none;
+    border-top: 6px solid var(--color-dark-green);
+    transition: 0.3s;
+}
+
+.dashboard-card h2 {
+    color: var(--color-dark-green);
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.dashboard-card p {
+    color: var(--color-text);
+    font-size: 1rem;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+/* Danger variant if needed */
+.dashboard-card.danger {
+    border-top: 6px solid #c0392b;
+}
+
+.dashboard-card.danger h2 {
+    color: #c0392b;
+}
+
+.dashboard-card.danger:hover {
+    background: #fdecea;
+}
+
+/* ===== RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+    .vote-box {
+        padding: 30px 20px;
+    }
+
+    .dashboard-grid {
+        gap: 20px;
+    }
+}

@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Ali Raza",
+        "email": "ali@mail.com",
+        "issue": "Vote Error",
+        "message": "Vote not submitting"
+    },
+    {
+        "name": "Sara Khan",
+        "email": "sara@mail.com",
+        "issue": "Login Issue",
+        "message": "Admin login failed"
+    },
+    {
+        "name": "Hamza Malik",
+        "email": "hamza@mail.com",
+        "issue": "Party Missing",
+        "message": "Party logo not visible"
+    }
+]

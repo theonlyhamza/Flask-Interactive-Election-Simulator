@@ -1,0 +1,165 @@
+/* ---------- Body & Fonts ---------- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e8f3e8; /* light green-ish background */
+    margin: 0;
+    color: #333;
+}
+
+.top-header {
+    background-color: #145a32; /* dark green */
+    color: #fff;
+    padding: 10px 0;
+}
+
+.top-bar-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.top-bar-content img {
+    width: 50px;
+    height: 50px;
+}
+
+.top-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+    background-color: #0a5c22; /* medium dark green */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+nav a.active, nav a:hover {
+    border-bottom: 2px solid #e8f3e8;
+}
+
+/* ---------- Main Content ---------- */
+.main-content {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.page-title h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.page-title .subtitle {
+    color: #555;
+}
+
+/* ---------- Cards ---------- */
+.vote-form-card, .about-card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ---------- Form ---------- */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.vote-btn {
+    background-color: #145a32;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.vote-btn:hover {
+    background-color: #0a5c22;
+}
+
+/* ---------- Party Selection ---------- */
+.party-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.party-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 130px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #fefefe;
+}
+
+.party-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.party-card input {
+    display: none;
+}
+
+.party-card span {
+    text-align: center;
+    font-weight: 500;
+}
+
+.party-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.party-card input:checked + img + span {
+    font-weight: 600;
+    color: #145a32;
+}
+
+/* ---------- Lists ---------- */
+.tech-list {
+    list-style-type: disc;
+    margin-left: 20px;
+}

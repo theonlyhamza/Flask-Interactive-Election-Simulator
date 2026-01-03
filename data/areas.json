@@ -1,0 +1,106 @@
+[
+    {
+        "code": "NA100",
+        "area_name": "LAHORE",
+        "province": "Punjab",
+        "type": "Urban",
+        "voters": 28940,
+        "remarks": "General constituency"
+    },
+    {
+        "code": "NA101",
+        "area_name": "KASUR",
+        "province": "Punjab",
+        "type": "Rural",
+        "voters": 32492,
+        "remarks": "General constituency"
+    },
+    {
+        "code": "NA102",
+        "area_name": "MULTAN",
+        "province": "Punjab",
+        "type": "Urban",
+        "voters": 41008,
+        "remarks": "General constituency"
+    },
+    {
+        "code": "NA103",
+        "area_name": "GUJRANWALA",
+        "province": "Punjab",
+        "type": "Rural",
+        "voters": 58601,
+        "remarks": "General constituency"
+    },
+    {
+        "code": "NA104",
+        "area_name": "FAISALABAD",
+        "province": "Punjab",
+        "type": "Rural",
+        "voters": 78114,
+        "remarks": "General constituency"
+    },
+    {
+        "code": "NA105",
+        "area_name": "KARACHI",
+        "province": "Sindh",
+        "type": "Urban",
+        "voters": 53882,
+        "remarks": "General constituency"
+    },
+    {
+        "code": "NA106",
+        "area_name": "HYDERABAD",
+        "province": "Sindh",
+        "type": "Mixed",
+        "voters": 48618,
+        "remarks": "General constituency"
+    },
+    {
+        "code": "NA107",
+        "area_name": "SUKKUR",
+        "province": "Sindh",
+        "type": "Rural",
+        "voters": 39865,
+        "remarks": "General constituency"
+    },
+    {
+        "code": "NA108",
+        "area_name": "PESHAWAR",
+        "province": "KPK",
+        "type": "Mixed",
+        "voters": 39812,
+        "remarks": "General constituency"
+    },
+    {
+        "code": "NA109",
+        "area_name": "MARDAN",
+        "province": "KPK",
+        "type": "Mixed",
+        "voters": 41426,
+        "remarks": "General constituency"
+    },
+    {
+        "code": "NA110",
+        "area_name": "SWAT",
+        "province": "KPK",
+        "type": "Urban",
+        "voters": 42752,
+        "remarks": "General constituency"
+    },
+    {
+        "code": "NA111",
+        "area_name": "QUETTA",
+        "province": "Balochistan",
+        "type": "Rural",
+        "voters": 34025,
+        "remarks": "General constituency"
+    },
+    {
+        "code": "NA112",
+        "area_name": "GWADAR",
+        "province": "Balochistan",
+        "type": "Urban",
+        "voters": 37768,
+        "remarks": "General constituency"
+    }
+]

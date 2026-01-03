@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Political Party | Admin Panel</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/add_party.css') }}">
+
+</head>
+
+<body>
+
+    <header class="top-header">
+        <div class="container top-bar-content">
+            <img
+                src="https://images.seeklogo.com/logo-png/41/1/emblem-of-the-election-commission-of-pakistan-logo-png_seeklogo-411520.png">
+            <div class="top-title">Admin Panel – Party Registration</div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="{{ url_for('admin_dashboard') }}">Dashboard</a></li>
+                <li><a class="active" href="#">Add Party</a></li>
+                <li><a href="{{ url_for('admin_login') }}">Support</a></li>
+                <li><a href="{{ url_for('about') }}" class="active">About Us</a></li>
+                <li><a href="{{ url_for('admin_login') }}">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+
+            <div class="page-title">
+                <h1>Register Political Party</h1>
+                <p class="subtitle">Complete party profile for election system</p>
+            </div>
+
+            <div class="vote-form-card">
+                <form method="POST" enctype="multipart/form-data">
+
+                    <div class="form-group">
+                        <label>Party Name</label>
+                        <input type="text" name="party_name" placeholder="e.g. Pakistan Tehreek-e-Insaf" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Party Symbol</label>
+                        <input type="text" name="symbol" placeholder="e.g. Bat, Arrow, Tiger" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Founder Name</label>
+                        <input type="text" name="founder" placeholder="Founder of the party" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Year Founded</label>
+                        <input type="number" name="year" placeholder="e.g. 1996" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Party Chairman / Leader</label>
+                        <input type="text" name="leader" placeholder="Current party leader" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Party Ideology</label>
+                        <select name="ideology" required>
+                            <option value="">Select Ideology</option>
+                            <option>Democratic</option>
+                            <option>Islamic</option>
+                            <option>Socialist</option>
+                            <option>Liberal</option>
+                            <option>Conservative</option>
+                            <option>Nationalist</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Head Office Location</label>
+                        <input type="text" name="head_office" placeholder="City / Province" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Official Website</label>
+                        <input type="url" name="website" placeholder="https://example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Party Logo</label>
+                        <input type="file" name="logo" accept="image/*">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Party Description</label>
+                        <textarea name="description" rows="4"
+                            placeholder="Brief description of party vision & goals"></textarea>
+                    </div>
+
+                    <button type="submit" class="vote-btn full-width">
+                        Register Party
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

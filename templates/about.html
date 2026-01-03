@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About Us | Interactive Election Simulator</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+
+</head>
+
+<body>
+
+    <header class="top-header">
+        <div class="container top-bar-content">
+            <img src="https://images.seeklogo.com/logo-png/41/1/emblem-of-the-election-commission-of-pakistan-logo-png_seeklogo-411520.png"
+                alt="ECP Logo">
+            <div class="top-title">Election Commission of Pakistan</div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('cast_vote') }}">Cast Vote</a></li>
+                <li><a href="{{ url_for('admin_login') }}">Admin Panel</a></li>
+                <li><a href="{{ url_for('support') }}">Support</a></li>
+                <li><a href="{{ url_for('about') }}" class="active">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+
+            <div class="page-title">
+                <h1>About Our Project</h1>
+                <p class="subtitle">Interactive Election Simulator</p>
+            </div>
+
+            <!-- Project Description -->
+            <div class="about-card">
+                <h2>Project Overview</h2>
+                <p>
+                    This is an interactive election simulator designed to model various voting systems and electoral
+                    rules. Users can explore how different parameters and voter behaviors influence election results and
+                    fairness.
+                </p>
+            </div>
+
+            <!-- Team Members -->
+            <div class="about-card">
+                <h2>Team Members</h2>
+
+                <div class="team-grid">
+                    <div class="team-member">
+                        <h3>Ali Hamza</h3>
+                        <p>Owner</p>
+                    </div>
+
+                    <div class="team-member">
+                        <h3>Bismillah Batool</h3>
+                        <p>CEO</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technologies -->
+            <div class="about-card">
+                <h2>Technologies Used</h2>
+                <ul class="tech-list">
+                    <li>HTML</li>
+                    <li>Css</li>
+                    <li>Python</li>
+                    <li>Flask</li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="about-card">
+                <h2>Contact Information</h2>
+                <p>
+                    Phone: +923214761464
+                    <br>
+                    Email: alihamza483@hotmail.com
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

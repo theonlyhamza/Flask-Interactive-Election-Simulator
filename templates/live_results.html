@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Live Results | Election Simulator</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/live_results.css') }}">
+
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header class="top-header">
+        <div class="container top-bar-content">
+            <h2>Live Election Results</h2>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="{{ url_for('admin_dashboard') }}">Dashboard</a></li>
+                <li><a class="active" href="#">Live Results</a></li>
+                <li><a href="{{ url_for('admin_login') }}">Support</a></li>
+                <li><a href="{{ url_for('about') }}" class="active">About Us</a></li>
+                <li><a href="{{ url_for('admin_login') }}">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+
+            <div class="page-title">
+                <h1>Party-wise Vote Count</h1>
+                <p class="subtitle">Results update in real-time</p>
+            </div>
+
+            <!-- RESULTS GRID -->
+            <div class="results-grid">
+
+                <!-- TABLE -->
+                <div class="results-card">
+                    <h3>Vote Summary</h3>
+                    <table class="results-table">
+                        <thead>
+                            <tr>
+                                <th>Party</th>
+                                <th>Total Votes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for party, count in results.items() %}
+                            <tr>
+                                <td>{{ party }}</td>
+                                <td>{{ count }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- CHART -->
+                <div class="results-card">
+                    <h3>Live Vote Graph</h3>
+                    <canvas id="resultsChart"></canvas>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        const partyNames = {{ results.keys() | list | tojson }};
+        const voteCounts = {{ results.values() | list | tojson }};
+
+        const ctx = document.getElementById('resultsChart').getContext('2d');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: partyNames,
+                datasets: [{
+                    label: 'Votes',
+                    data: voteCounts,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { precision: 0 }
+                    }
+                }
+            }
+        });
+        setTimeout(() => {
+            window.location.reload();
+        }, 10000);
+
+    </script>
+
+</body>
+
+</html>

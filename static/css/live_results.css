@@ -1,0 +1,75 @@
+/* ===== LIVE RESULTS PAGE STYLES ===== */
+
+/* Results Grid */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Individual Card */
+.results-card {
+    background: var(--color-white);
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    border-top: 6px solid var(--color-dark-green);
+}
+
+.results-card h3 {
+    color: var(--color-dark-green);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+/* Results Table */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.results-table th,
+.results-table td {
+    border: 1px solid #ddd;
+    padding: 12px 10px;
+    text-align: center;
+}
+
+.results-table th {
+    background: var(--color-medium-green);
+    color: var(--color-white);
+    font-weight: 600;
+}
+
+/* Highlight winner row dynamically if needed */
+.results-table tr.winner {
+    background: var(--color-dark-green);
+    color: white;
+    font-weight: 600;
+}
+
+/* Chart */
+#resultsChart {
+    width: 100%;
+    height: 300px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .results-grid {
+        gap: 20px;
+    }
+
+    .results-card {
+        padding: 20px;
+    }
+}
+
+/* Optional: add hover effect for table rows */
+.results-table tbody tr:hover {
+    background: rgba(20, 90, 50, 0.1);
+}

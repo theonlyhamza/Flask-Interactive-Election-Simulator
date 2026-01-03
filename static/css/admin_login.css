@@ -1,0 +1,59 @@
+/* ===== ADMIN LOGIN PAGE STYLES ===== */
+
+/* Admin Login Card */
+.admin-login-card {
+    max-width: 420px;
+    margin: 0 auto;
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+    border-top: 6px solid var(--color-dark-green);
+    text-align: center;
+}
+
+/* Form inside admin card */
+.admin-login-card .form-group {
+    text-align: left;
+}
+
+/* Optional: lighter input background */
+.admin-login-card input {
+    background: #f9faf9;
+}
+
+/* Active menu item highlight (in navbar) */
+nav ul li a.active {
+    background: var(--color-dark-green);
+}
+
+/* About card reuse */
+.about-card {
+    background: var(--color-white);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    border-left: 6px solid var(--color-medium-green);
+}
+
+.about-card h2 {
+    color: var(--color-dark-green);
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    line-height: 1.7;
+    color: var(--color-text);
+}
+
+/* ===== RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+    .admin-login-card {
+        padding: 30px 20px;
+    }
+
+    .about-card {
+        padding: 25px 15px;
+    }
+}
