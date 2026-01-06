@@ -30,34 +30,8 @@ body {
     font-weight: 600;
 }
 
-/* ---------- Navigation ---------- */
-nav {
-    background-color: #0a5c22; /* medium dark green */
-}
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 
-nav li {
-    margin: 0 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 10px;
-    transition: 0.2s;
-}
-
-nav a.active, nav a:hover {
-    border-bottom: 2px solid #e8f3e8;
-}
 
 /* ---------- Main Content ---------- */
 .main-content {

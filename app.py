@@ -5,7 +5,7 @@ from collections import Counter
 app = Flask(__name__)
 app.secret_key = "secret123"
 
-# --- Data folder and files ---
+# Data folder and files
 DATA_DIR = "data"
 os.makedirs(DATA_DIR, exist_ok=True)
 
@@ -17,7 +17,7 @@ FILES = {
     "support": os.path.join(DATA_DIR, "support.json")
 }
 
-# ---------- Utility Functions ----------
+# Utility Functions
 def load_data(file):
     if not os.path.exists(file):
         return []
@@ -31,7 +31,7 @@ def save_data(file, data):
     with open(file, "w") as f:
         json.dump(data, f, indent=4)
 
-# ---------- Public Routes ----------
+#  Public Routes 
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -69,7 +69,7 @@ def cast_vote():
 
     return render_template("cast_vote.html", parties=parties)
 
-# ---------- Admin Routes ----------
+# Admin Routes 
 @app.route("/admin-login", methods=["GET", "POST"])
 def admin_login():
     if request.method == "POST":
@@ -146,7 +146,7 @@ def add_party():
         if logo_file and logo_file.filename != "":
             filename = secure_filename(logo_file.filename)
             logo_file.save(os.path.join(UPLOAD_FOLDER, filename))
-            logo_path = f"{UPLOAD_FOLDER}/{filename}"  # Path relative to project root
+            logo_path = f"{UPLOAD_FOLDER}/{filename}" 
 
         party = {
             "party_name": party_name,

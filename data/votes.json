@@ -166748,5 +166748,15 @@
         "cnic": "3510294648892",
         "party": "Pakistan Tehreek-e-Insaf",
         "area": "KASUR"
+    },
+    {
+        "cnic": "1234567890000",
+        "party": "Pakistan Tehreek-e-Insaf",
+        "area": "QUETTA"
+    },
+    {
+        "cnic": "3444444444444",
+        "party": "Pakistan Tehreek-e-Insaf",
+        "area": "MARDAN"
     }
 ]
